@@ -1,10 +1,9 @@
-<?php
+<?php 
 
-require_once __DIR__.'/lib/Ship.php';
-require_once __DIR__.'/lib/BattleManager.php';
-
-function get_ships()
+class ShipLoader
 {
+  public function getShips()
+  {
     $ships = array();
 
     $ship = new Ship('Jedi Starfighter');
@@ -32,12 +31,5 @@ function get_ships()
     $ships['rz1_a_wing_interceptor'] = $ship4;
 
     return $ships;
-}
-
-
-function didJediDestroyShipUsingTheForce(Ship $ship)
-{
-    $jediHeroProbability = $ship->getJediFactor() / 100;
-
-    return mt_rand(1, 100) <= ($jediHeroProbability*100);
+  }
 }
