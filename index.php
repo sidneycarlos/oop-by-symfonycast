@@ -1,30 +1,31 @@
 <?php
-require __DIR__.'/bootstrap.php';
+// require __DIR__.'/bootstrap.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
-$shipLoader = new ShipLoader();
-$ships = $shipLoader->getShips();
+// $shipLoader = new ShipLoader();
+// $ships = $shipLoader->getShips();
 
 
-$errorMessage = '';
-if (isset($_GET['error'])) {
-    switch ($_GET['error']) {
-        case 'missing_data':
-            $errorMessage = 'Don\'t forget to select some ships to battle!';
-            break;
-        case 'bad_ships':
-            $errorMessage = 'You\'re trying to fight with a ship that\'s unknown to the galaxy?';
-            break;
-        case 'bad_quantities':
-            $errorMessage = 'You pick strange numbers of ships to battle - try again.';
-            break;
-        default:
-            $errorMessage = 'There was a disturbance in the force. Try again.';
-    }
-}
+// $errorMessage = '';
+// if (isset($_GET['error'])) {
+//     switch ($_GET['error']) {
+//         case 'missing_data':
+//             $errorMessage = 'Don\'t forget to select some ships to battle!';
+//             break;
+//         case 'bad_ships':
+//             $errorMessage = 'You\'re trying to fight with a ship that\'s unknown to the galaxy?';
+//             break;
+//         case 'bad_quantities':
+//             $errorMessage = 'You pick strange numbers of ships to battle - try again.';
+//             break;
+//         default:
+//             $errorMessage = 'There was a disturbance in the force. Try again.';
+//     }
+// }
+phpinfo();
 ?>
 
 <html>
